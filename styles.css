@@ -678,6 +678,8 @@ a { color: var(--accent); }
   text-align: center;
 }
 
+.contact .section-label { text-align: left; }
+
 .contact h2 { color: #fff; }
 
 .contact-lead {
