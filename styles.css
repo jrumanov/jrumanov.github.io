@@ -817,9 +817,44 @@ a { color: var(--accent); }
   .hero-actions .btn { width: 100%; text-align: center; }
 }
 
+/* ---------- easter egg toast ---------- */
+
+.easter-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 500;
+  transform: translate(-50%, 12px);
+  opacity: 0;
+  pointer-events: none;
+
+  background: var(--white);
+  color: var(--navy);
+  font: 600 14px/1.4 "Inter", sans-serif;
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.easter-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .easter-toast {
+    transition: opacity .15s linear;
+    transform: translate(-50%, 0);
+  }
+}
+
 /* ---------- print ---------- */
 
 @media print {
+  .easter-toast { display: none; }
   .site-header, .hero-actions, .nav-toggle, .skip-link { display: none; }
   body { background: #fff; font-size: 11pt; }
   .hero, .contact, .site-footer { background: #fff !important; color: #000; }

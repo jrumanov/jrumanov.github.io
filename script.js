@@ -172,4 +172,56 @@
       reveal.observe(block);
     });
   }
+
+  /* ---- a little something for anyone in devtools ---- */
+  console.log(
+    "%cNice of you to check.",
+    "font: bold 14px/1.4 Inter, sans-serif; color:#0f2d52;"
+  );
+  console.log(
+    "%c✓ 0 console errors   ✓ hand-written HTML/CSS/JS   ✓ no emoji were harmed",
+    "font: 12px/1.6 monospace; color:#64748b;"
+  );
+
+  /* ---- konami code: ↑ ↑ ↓ ↓ ← → ← → B A ----
+     A small reward for testers who still remember it. */
+  var KONAMI = [
+    "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
+    "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
+    "b", "a"
+  ];
+  var konamiPos = 0;
+
+  function showEasterToast() {
+    var toast = document.createElement("div");
+    toast.className = "easter-toast";
+    toast.setAttribute("role", "status");
+    toast.textContent = "Edge case found. That’s the job.";
+    document.body.appendChild(toast);
+
+    window.requestAnimationFrame(function () {
+      toast.classList.add("show");
+    });
+
+    window.setTimeout(function () {
+      toast.classList.remove("show");
+      window.setTimeout(function () { toast.remove(); }, 300);
+    }, 3200);
+  }
+
+  document.addEventListener("keydown", function (e) {
+    var expected = KONAMI[konamiPos];
+    var matched = e.key === expected ||
+      (expected.length === 1 && e.key.toLowerCase() === expected);
+
+    if (matched) {
+      konamiPos++;
+      if (konamiPos === KONAMI.length) {
+        konamiPos = 0;
+        showEasterToast();
+      }
+    } else {
+      konamiPos = (e.key === KONAMI[0]) ? 1 : 0;
+    }
+  });
 })();
