@@ -12,6 +12,7 @@ and that is exactly what ships.
 | `styles.css` | Design tokens at the top, then layout. |
 | `script.js` | Sticky header, mobile menu, scroll-spy, fade-in. Page works fine without it. |
 | `assets/jakub.jpg` | Hero portrait. |
+| `assets/Jakub_Rumanovsky_CV.pdf` | Public CV (no phone, street address or recommendations). A copy: rebuild and replace it when the CV changes. |
 | `favicon.svg` | Tab icon. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is. |
 
@@ -64,5 +65,4 @@ First publish takes a minute or two. After that every `git push` redeploys.
 ## Deliberately out of scope for v1
 
 Dark mode, contact form, blog, project detail pages, analytics, custom domain,
-and a downloadable CV. The Experience section is the CV; recruiters email for
-the PDF.
+and a CV page. The Experience section is the CV; a public PDF is offered as a download.
