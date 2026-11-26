@@ -64,5 +64,10 @@ First publish takes a minute or two. After that every `git push` redeploys.
 
 ## Deliberately out of scope for v1
 
-Dark mode, contact form, blog, project detail pages, analytics, custom domain,
+Dark mode, contact form, blog, project detail pages, custom domain,
 and a CV page. The Experience section is the CV; a public PDF is offered as a download.
+
+## Visit counter
+Unique visits are counted by [GoatCounter](https://www.goatcounter.com) (cookieless, no
+banner needed). The script tag at the bottom of `index.html` reports to
+`jrumanov.goatcounter.com`; stats are in the GoatCounter dashboard.
