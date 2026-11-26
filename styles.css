@@ -888,3 +888,6 @@ a { color: var(--accent); }
 .contact-cv { margin-top: 18px; font-size: .92rem; }
 .contact-cv a { color: #cbd5e1; text-decoration: underline; text-underline-offset: 3px; }
 .contact-cv a:hover { color: #fff; }
+
+/* a lone project card should not stretch across the whole section */
+.cards > .card:only-child { max-width: 440px; }
